@@ -38,7 +38,6 @@
 </template>
   
   <script setup lang="ts">
-    import down from '@/assets/image/down.png'
   </script>
   
   <style scoped>

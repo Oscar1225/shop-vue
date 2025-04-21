@@ -6,7 +6,7 @@
         </a>
       </div>
     </div>
-  </template>
+</template>
   
   <script setup lang="ts">
     import down from '@/assets/image/down.png'
