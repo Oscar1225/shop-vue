@@ -6,6 +6,7 @@ import PocketAI顯示卡 from "@/assets/image/searchdata/Pocket AI 顯示卡.jpg
 import iphone16promax from "@/assets/image/searchdata/iphone16promax.jpg"
 import GalaxyS25Ultra5G from "@/assets/image/searchdata/Galaxy S25 Ultra 5G.jpg"
 import ASUSROG華碩StrixG1616吋電競筆電黑色 from "@/assets/image/searchdata/ASUS ROG 華碩Strix G16 16吋電競筆電黑色.jpg"
+import rogpghone9 from "@/assets/image/searchdata/rogphone9.png"
 export const products: Product[] = [
   {
     id: 1,
@@ -44,10 +45,10 @@ export const products: Product[] = [
   },
   {
     id: 6,
-    name: 'ASUS ROG 華碩Strix G16 16吋電競筆電黑色',
-    price: 69999,
-    description: 'ASUS ROG 華碩Strix G16 16吋電競筆電黑色',
-    image: ASUSROG華碩StrixG1616吋電競筆電黑色
+    name: 'ASUS 華碩 ROG Phone 9 Pro Edition 5G',
+    price: 45990,
+    description: 'ASUS 華碩 ROG Phone 9 Pro Edition 5G',
+    image: rogpghone9
   },
   {
     id: 7,

@@ -37,10 +37,18 @@ function addToCart(product) {
   height: 100%;
   display: flex;
   flex-direction: column;
-  align-items: center;  /* 水平置中按鈕內的元素 */
-  justify-content: center; /* 垂直置中按鈕內的元素 */
+  align-items: center;
+  justify-content: center;
   text-align: center;
+  transition: all 0.3s ease; /* 加入過渡動畫 */
 }
+.b:hover {
+  background-color: #f0f0f0; /* 滑鼠移上時的背景色 */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* 陰影效果 */
+  transform: scale(1.02); /* 微微放大 */
+  border-radius: 8px; /* 可選：滑鼠移上時加強圓角感 */
+}
+
 .search-title {
   text-align: center;
   margin: 20px 0;
