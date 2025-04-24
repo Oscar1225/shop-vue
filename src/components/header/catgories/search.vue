@@ -30,11 +30,15 @@ function addToCart(product) {
 </template>
 
 <style scoped>
-.button{
-    all: unset; /* 先把預設樣式清掉 */
-  cursor: pointer; /* 保留點擊手感 */
-  display: block;
+.b {
+  all: unset;
+  cursor: pointer;
   width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;  /* 水平置中按鈕內的元素 */
+  justify-content: center; /* 垂直置中按鈕內的元素 */
   text-align: center;
 }
 .search-title {
@@ -44,16 +48,19 @@ function addToCart(product) {
 .product-list {
   display: flex;
   flex-wrap: wrap;
-  gap: 20px;
-  justify-content: center;
+  gap: 16px; /* 卡片之間的距離 */
+  justify-content: center; /* 水平置中整體列表 */
 }
 .product-card {
-  width: 180px;
+  width: 200px;
+  height: 300px;
+  box-sizing: border-box;
   border: 1px solid #ccc;
-  padding: 10px;
-  border-radius: 10px;
-  text-align: center;
-  box-shadow: 0 0 5px rgba(0,0,0,0.1);
+  border-radius: 8px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;  /* 垂直置中內容 */
+  justify-content: center; /* 水平置中內容 */
 }
 .product-card img {
   width: 100%;
@@ -67,5 +74,9 @@ function addToCart(product) {
 .product-card p {
   color: #ff5722;
   font-weight: bold;
+}
+.b img {
+  width: 100%;
+  height: 100%;
 }
 </style>
