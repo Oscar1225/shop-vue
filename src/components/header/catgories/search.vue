@@ -12,20 +12,31 @@ const filtered = computed(() =>//這也是一個計算屬性，用來根據 keyw
     p.description.toLowerCase().includes(keyword.value.toLowerCase())//如果 商品名稱 或 商品描述 包含關鍵字，就保留這個商品。
   )
 )
+function addToCart(product) {
+  console.log('加入購物車：', product)
+  // 這裡你可以之後接 API 或更新購物車狀態
+}
 </script>
 
 <template>
   <div class="product-list">
     <div v-for="product in filtered" :key="product.id" class="product-card">
+      <button class="b" @click="addToCart(product)">
       <img :src="product.image" :alt="product.name" />
       <h3>{{ product.name }}</h3>
-      <p>${{ product.price }}</p>
-      <button>購買</button>
+      <p>${{ product.price }}</p></button>
     </div>
   </div>
 </template>
 
 <style scoped>
+.button{
+    all: unset; /* 先把預設樣式清掉 */
+  cursor: pointer; /* 保留點擊手感 */
+  display: block;
+  width: 100%;
+  text-align: center;
+}
 .search-title {
   text-align: center;
   margin: 20px 0;
