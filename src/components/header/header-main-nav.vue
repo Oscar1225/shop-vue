@@ -20,7 +20,7 @@ const search = () => {
       </router-link>
     </div>
     <div class="search-bar">
-      <input v-model="keyword" type="text" placeholder="搜尋商品關鍵字" />
+      <input v-model="keyword" type="text" placeholder="搜尋商品關鍵字" @keyup.enter="search"/>
       <button  @click="search"><i class="fa-solid fa-magnifying-glass"></i></button>
     </div>
     <div class="cart-icon">
