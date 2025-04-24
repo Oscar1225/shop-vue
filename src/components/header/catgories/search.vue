@@ -1,35 +1,10 @@
 <script setup lang="ts">
 import { computed } from 'vue'
 import { useRoute } from 'vue-router'
-import type { Product } from '@/types/product'
-import test from '@/assets/image/test.jpg'
+import { products } from '@/data/products'
 
 const route = useRoute()
 const keyword = computed(() => route.query.keyword?.toString() || '')
-
-const products: Product[] = [
-  {
-    id: 1,
-    name: 'GPU Minyak Urut 60ml',
-    price: 155,
-    description: '傳統草芳香按摩油',
-    image: test
-  },
-  {
-    id: 2,
-    name: 'NVIDIA H100 80G',
-    price: 499999,
-    description: '企業級GPU',
-    image: 'https://cf.shopee.tw/file/50ef39c030c7c6b5f9d511e4f92a2c2e'
-  },
-  {
-    id: 3,
-    name: 'Pocket AI 顯示卡',
-    price: 16800,
-    description: 'Thunderbolt可攜式GPU',
-    image: 'https://cf.shopee.tw/file/cde17c764df373acdf27e5f90fbc013a'
-  }
-]
 
 const filtered = computed(() =>
   products.filter(p =>
@@ -47,6 +22,7 @@ const filtered = computed(() =>
       <img :src="product.image" :alt="product.name" />
       <h3>{{ product.name }}</h3>
       <p>${{ product.price }}</p>
+      <button>購買</button>
     </div>
   </div>
 </template>
