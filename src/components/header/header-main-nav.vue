@@ -1,18 +1,34 @@
-<template>
-    <div class="main-nav">
-        <div class="logo"><router-link to="/"><i class="fa-solid fa-bag-shopping"></i> 蝦皮購物</router-link></div>
-        <div class="search-bar">
-            <input type="text" placeholder="註冊獲得全站優惠券與免運券">
-            <button><i class=" fa-solid fa-magnifying-glass"></i></button>
-        </div>
-        <div class="cart-icon">
-            <button><i class="fa-solid fa-cart-shopping"></i></button>
-        </div>
-    </div>
-</template>
-
 <script setup lang="ts">
+import { ref } from 'vue'
+import { useRouter } from 'vue-router'
+
+const keyword = ref('')
+const router = useRouter()
+
+const search = () => {
+  if (keyword.value.trim()) {
+    router.push({ path: '/search', query: { keyword: keyword.value } })
+  }
+}
 </script>
+
+<template>
+  <div class="main-nav">
+    <div class="logo">
+      <router-link to="/">
+        <i class="fa-solid fa-bag-shopping"></i> 蝦皮購物
+      </router-link>
+    </div>
+    <div class="search-bar">
+      <input v-model="keyword" type="text" placeholder="搜尋商品關鍵字" />
+      <button  @click="search"><i class="fa-solid fa-magnifying-glass"></i></button>
+    </div>
+    <div class="cart-icon">
+      <button><i class="fa-solid fa-cart-shopping"></i></button>
+    </div>
+  </div>
+
+</template>
 
 <style scoped>
 .main-nav{
