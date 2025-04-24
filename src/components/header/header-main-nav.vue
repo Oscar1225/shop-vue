@@ -7,7 +7,7 @@ const router = useRouter()
 
 const search = () => {
   if (keyword.value.trim()) {
-    router.push({ path: '/search', query: { keyword: keyword.value } })
+    router.push({ path: '/search', query: { keyword: keyword.value } }) // 查詢參數（會變成 ?keyword=xxx）
   }
 }
 </script>

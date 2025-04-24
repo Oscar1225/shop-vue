@@ -4,19 +4,17 @@ import { useRoute } from 'vue-router'
 import { products } from '@/data/products'
 
 const route = useRoute()
-const keyword = computed(() => route.query.keyword?.toString() || '')
+const keyword = computed(() => route.query.keyword?.toString() || '')//從目前的路由查詢字串中取得 keyword 這個參數的值。如果沒有的話就回傳空字串 ''。
 
-const filtered = computed(() =>
-  products.filter(p =>
+const filtered = computed(() =>//這也是一個計算屬性，用來根據 keyword 對 products 陣列進行過濾。
+  products.filter(p =>//假設 products 是一個商品陣列（你可能在別的地方定義了），這裡會根據條件留下符合搜尋關鍵字的項目。
     p.name.toLowerCase().includes(keyword.value.toLowerCase()) ||
-    p.description.toLowerCase().includes(keyword.value.toLowerCase())
+    p.description.toLowerCase().includes(keyword.value.toLowerCase())//如果 商品名稱 或 商品描述 包含關鍵字，就保留這個商品。
   )
 )
 </script>
 
 <template>
-  <div class="search-title">
-  </div>
   <div class="product-list">
     <div v-for="product in filtered" :key="product.id" class="product-card">
       <img :src="product.image" :alt="product.name" />

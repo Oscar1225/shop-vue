@@ -1,6 +1,6 @@
 // src/data/products.ts
 import type { Product } from '@/types/product'
-import test from "@/assets/image/test.jpg"
+import 傳統草芳香按摩油 from "@/assets/image/searchdata/傳統草芳香按摩油.jpg"
 
 export const products: Product[] = [
   {
@@ -8,7 +8,7 @@ export const products: Product[] = [
     name: 'GPU Minyak Urut 60ml',
     price: 155,
     description: '傳統草芳香按摩油',
-    image: test
+    image: 傳統草芳香按摩油
   },
   {
     id: 2,
