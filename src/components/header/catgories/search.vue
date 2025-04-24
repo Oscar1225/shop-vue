@@ -2,6 +2,7 @@
 import { computed } from 'vue'
 import { useRoute } from 'vue-router'
 import type { Product } from '@/types/product'
+import test from '@/assets/image/test.jpg'
 
 const route = useRoute()
 const keyword = computed(() => route.query.keyword?.toString() || '')
@@ -12,7 +13,7 @@ const products: Product[] = [
     name: 'GPU Minyak Urut 60ml',
     price: 155,
     description: '傳統草芳香按摩油',
-    image: 'https://cf.shopee.tw/file/7e7c67c7a860e4cf8ff42d31db1f5d4a'
+    image: test
   },
   {
     id: 2,
@@ -40,7 +41,6 @@ const filtered = computed(() =>
 
 <template>
   <div class="search-title">
-    <h2>搜尋結果：{{ keyword }}</h2>
   </div>
   <div class="product-list">
     <div v-for="product in filtered" :key="product.id" class="product-card">
