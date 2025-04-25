@@ -19,6 +19,7 @@ function addToCart(product) {
 </script>
 
 <template>
+  <h2 class="h2"><span class="hk">'{{ keyword }}'</span>搜尋結果</h2>
   <div class="product-list">
     <div v-for="product in filtered" :key="product.id" class="product-card">
       <button class="b" @click="addToCart(product)">
@@ -30,6 +31,14 @@ function addToCart(product) {
 </template>
 
 <style scoped>
+.h2{
+  text-align: center;
+}
+.hk {
+  font-size: 24px;
+  color: red;
+}
+
 .b {
   all: unset;
   cursor: pointer;

@@ -1,6 +1,4 @@
 <script setup lang="ts">
-    import first from '@/components/footer/first.vue'
-    import second from '@/components/footer/second.vue'
 </script>
 
 <template>
@@ -8,11 +6,7 @@
     <br>
     <router-view name="main"></router-view>
     <br>
-    <footer>
-        <first />
-        <br />
-        <second />
-    </footer>
+    <router-view name="footer"></router-view>
 
 </template>
 

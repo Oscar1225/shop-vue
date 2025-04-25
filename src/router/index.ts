@@ -1,14 +1,16 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import headerall from "@/components/header/header-all.vue"
 import mainone from '@/components/main/main-one.vue'
-import search from '@/components/header/catgories/search.vue'
+import search from '@/components/main/search.vue'
+import Footerall from '@/components/footer/footerall.vue'
 
 const routes = [
   {
     path: '/',
     components: {
       header: headerall,
-      main: mainone
+      main: mainone,
+      footer:Footerall
     }
   },
   {
