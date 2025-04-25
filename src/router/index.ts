@@ -13,12 +13,6 @@ const routes = [
       footer:Footerall
     }
   },
-  {
-    path: "/cheap-phone",
-    components: {
-      header: headerall,
-    }
-  },
     {
     path: '/search',
     name: 'Search',

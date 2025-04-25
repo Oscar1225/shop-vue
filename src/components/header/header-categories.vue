@@ -1,6 +1,6 @@
 <template>
     <div class="categories">
-        <router-link to="/cheap-phone">超便宜手機</router-link> |
+        <router-link :to="{ path: '/search', query: { keyword: 'phone' } }">超便宜手機</router-link> |
         <a href="#">Nike官網</a> |
         <a href="#">學生裝</a> |
         <a href="#">行充20000mah</a> |
