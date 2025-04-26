@@ -66,7 +66,9 @@ function addToCart(product) {
   display: flex;
   flex-wrap: wrap;
   gap: 16px; /* 卡片之間的距離 */
-  justify-content: center; /* 水平置中整體列表 */
+  justify-content: left; /* 水平置中整體列表 */
+  margin-left:5%;
+  margin-right:5%;
 }
 .product-card {
   width: 200px;
