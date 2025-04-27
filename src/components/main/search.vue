@@ -9,7 +9,7 @@ const route = useRoute()
 const keyword = computed(() => route.query.keyword?.toString() || '')//從目前的路由查詢字串中取得 keyword 這個參數的值。如果沒有的話就回傳空字串 ''。
 const cartStore = useCartStore()
 const showMessage = ref(false)
-const messageText = ref('')
+const messageText = ref('')//
 
 const filtered = computed(() =>//這也是一個計算屬性，用來根據 keyword 對 products 陣列進行過濾。
   products.filter(p =>//假設 products 是一個商品陣列（你可能在別的地方定義了），這裡會根據條件留下符合搜尋關鍵字的項目。
