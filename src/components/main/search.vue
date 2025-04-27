@@ -2,9 +2,11 @@
 import { computed } from 'vue'
 import { useRoute } from 'vue-router'
 import { products } from '@/data/products'
+import { useCartStore } from '@/stores/cart'
 
 const route = useRoute()
 const keyword = computed(() => route.query.keyword?.toString() || '')//從目前的路由查詢字串中取得 keyword 這個參數的值。如果沒有的話就回傳空字串 ''。
+const cartStore = useCartStore()
 
 const filtered = computed(() =>//這也是一個計算屬性，用來根據 keyword 對 products 陣列進行過濾。
   products.filter(p =>//假設 products 是一個商品陣列（你可能在別的地方定義了），這裡會根據條件留下符合搜尋關鍵字的項目。
@@ -16,6 +18,10 @@ function addToCart(product) {
   console.log('加入購物車：', product)
   // 這裡你可以之後接 API 或更新購物車狀態
 }
+
+function handleAddToCart(product) {
+  cartStore.addToCart(product)
+}
 </script>
 
 <template>
@@ -26,6 +32,20 @@ function addToCart(product) {
       <img :src="product.image" :alt="product.name" />
       <h3>{{ product.name }}</h3>
       <p>${{ product.price }}</p></button>
+    </div>
+  </div>
+
+  <div class="grid grid-cols-2 gap-4 p-4">
+    <div 
+      v-for="product in products" 
+      :key="product.id" 
+      @click="handleAddToCart(product)"
+      class="border rounded-lg p-4 shadow hover:shadow-lg transition cursor-pointer"
+    >
+      <img :src="product.image" alt="商品圖片" class="w-full h-40 object-cover mb-2" />
+      <div class="font-bold text-lg">{{ product.name }}</div>
+      <div class="text-gray-500">{{ product.spec }}</div>
+      <div class="text-red-500">${{ product.price }}</div>
     </div>
   </div>
 </template>
