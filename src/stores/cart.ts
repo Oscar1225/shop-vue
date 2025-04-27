@@ -1,17 +1,18 @@
 import { defineStore } from 'pinia'
-import type { Product } from '@/data/products'  // 引用你的商品資料型別
+import type { Product } from '@/data/products'
 
 export const useCartStore = defineStore('cart', {
   state: () => ({
-    cart: [] as Array<Product & { quantity: number }>
+    cart: [] as Array<Product & { quantity: number, selected: boolean }>
   }),
+  
   actions: {
     addToCart(product: Product) {
       const existingItem = this.cart.find(item => item.id === product.id)
       if (existingItem) {
         existingItem.quantity++
       } else {
-        this.cart.push({ ...product, quantity: 1 })
+        this.cart.push({ ...product, quantity: 1, selected: true })
       }
     },
     removeFromCart(productId: number) {
@@ -27,6 +28,14 @@ export const useCartStore = defineStore('cart', {
     },
     clearCart() {
       this.cart = []
+    }
+  },
+
+  getters: {
+    totalPrice(state) {
+      return state.cart
+        .filter(item => item.selected) // 只算有勾選的
+        .reduce((total, item) => total + item.price * item.quantity, 0)
     }
   }
 })
