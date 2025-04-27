@@ -15,13 +15,10 @@ const filtered = computed(() =>//這也是一個計算屬性，用來根據 keyw
   )
 )
 function addToCart(product) {
-  console.log('加入購物車：', product)
+  cartStore.addToCart(product)
   // 這裡你可以之後接 API 或更新購物車狀態
 }
 
-function handleAddToCart(product) {
-  cartStore.addToCart(product)
-}
 </script>
 
 <template>
@@ -32,20 +29,6 @@ function handleAddToCart(product) {
       <img :src="product.image" :alt="product.name" />
       <h3>{{ product.name }}</h3>
       <p>${{ product.price }}</p></button>
-    </div>
-  </div>
-
-  <div class="grid grid-cols-2 gap-4 p-4">
-    <div 
-      v-for="product in products" 
-      :key="product.id" 
-      @click="handleAddToCart(product)"
-      class="border rounded-lg p-4 shadow hover:shadow-lg transition cursor-pointer"
-    >
-      <img :src="product.image" alt="商品圖片" class="w-full h-40 object-cover mb-2" />
-      <div class="font-bold text-lg">{{ product.name }}</div>
-      <div class="text-gray-500">{{ product.spec }}</div>
-      <div class="text-red-500">${{ product.price }}</div>
     </div>
   </div>
 </template>
