@@ -4,6 +4,7 @@ import mainone from '@/components/main/main-one.vue'
 import search from '@/components/main/search.vue'
 import Footerall from '@/components/footer/footerall.vue'
 import buy from "@/components/header/buyheader.vue"
+import Commoditie from '@/components/main/commoditie.vue'
 
 const routes = [
   {
@@ -27,6 +28,7 @@ const routes = [
     name: 'buy',
     components: {
     header:buy,
+    main:Commoditie,
     }
   }
 ]
