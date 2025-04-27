@@ -13,10 +13,11 @@ const messageText = ref('')
 const filtered = computed(() =>//這也是一個計算屬性，用來根據 keyword 對 products 陣列進行過濾。
   products.filter(p =>//假設 products 是一個商品陣列（你可能在別的地方定義了），這裡會根據條件留下符合搜尋關鍵字的項目。
     p.name.toLowerCase().includes(keyword.value.toLowerCase()) ||
-    p.description.toLowerCase().includes(keyword.value.toLowerCase())//如果 商品名稱 或 商品描述 包含關鍵字，就保留這個商品。
+    p.description.toLowerCase().includes(keyword.value.toLowerCase()) ||
+    p.shopName.toLowerCase().includes(keyword.value.toLowerCase())//如果 商品名稱 或 商品描述 包含關鍵字，就保留這個商品。
   )
 )
-function addToCart(product) {
+function addToCart(product: { name: any }) {
   cartStore.addToCart(product)
   // 這裡你可以之後接 API 或更新購物車狀態
   messageText.value = `${product.name} 已加入購物車！`
