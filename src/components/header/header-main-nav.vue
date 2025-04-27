@@ -24,7 +24,9 @@ const search = () => {
       <button  @click="search"><i class="fa-solid fa-magnifying-glass"></i></button>
     </div>
     <div class="cart-icon">
-      <button><i class="fa-solid fa-cart-shopping"></i></button>
+      <router-link to="/buy">
+        <button><i class="fa-solid fa-cart-shopping"></i></button>
+      </router-link>
     </div>
   </div>
 
