@@ -12,7 +12,7 @@ export const useCartStore = defineStore('cart', {
       if (existingItem) {
         existingItem.quantity++
       } else {
-        this.cart.push({ ...product, quantity: 1, selected: true })
+        this.cart.push({ ...product, quantity: 1, selected: false })
       }
     },
     removeFromCart(productId: number) {
