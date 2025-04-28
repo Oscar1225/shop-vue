@@ -1,17 +1,30 @@
 <script setup lang="ts" console.log(cartStore.cart)>
 import { ref } from 'vue'
 import { useCartStore } from '@/stores/cart'
-/*import { colorOptions } from '@/src/data/colorOptions'
-import { capacityOptions } from '@/src/data/capacityOptions'
-*/
+import { colorOptions } from '@/data/colorOptions'
+import { capacityOptions } from '@/data/capacityOptions'
 const cartStore = useCartStore()
 
+const allSelected = ref(false)
 // 🔥 定義用來記錄現在打開的商品（點選哪個商品開啟規格）
 const activeItem = ref<any | []>([])
 const currentSpec = ref<{ color: string; capacity: string }>({
   color: '',
   capacity: ''
 });
+
+// 勾選或取消全部商品
+function toggleSelectAll() {
+  allSelected.value = !allSelected.value
+  cartStore.cart.forEach(item => {
+    item.selected = allSelected.value
+  })
+}
+
+//單選時也可以更新全選狀態
+function updateAllSelected() {
+  allSelected.value = cartStore.cart.length > 0 && cartStore.cart.every(item => item.selected)
+}
 
 // 🔥 點擊商品規格時，開關下拉彈窗
 function toggleSpecSelector(item: any) {
@@ -40,7 +53,9 @@ function confirmSpec(item: any) {
     <div v-else>
       <!-- 商品列表 -->
       <div class="cart-list">
-        <div class="list-checkbox"></div>
+        <div class="list-checkbox">
+          <input type="checkbox" :checked="allSelected" @change="toggleSelectAll" />
+        </div>
         <div class="list-product">商品</div>
         <div class="list-price">價格</div>
         <div class="list-number">數量</div>
@@ -125,12 +140,17 @@ function confirmSpec(item: any) {
           <button @click="cartStore.removeFromCart(item.id)" class="text-blue-500 ml-4">
             刪除
           </button>
+          <div class="dropdown-search-icon">找相似 ▼</div>
         </div>
       </div>
     </div>
 
     <!-- 購物車總結區域 -->
     <div class="cart-summary py-4">
+    <div class="checkout-checkbox">
+        <input type="checkbox" :checked="allSelected" @change="toggleSelectAll" />
+        <span class="ml-2">全選</span>
+    </div>
     <div class="font-bold text-lg text-right">
         總金額：${{ Math.round(cartStore.totalPrice || 0) }}
     </div>
@@ -150,7 +170,7 @@ function confirmSpec(item: any) {
 
 .cart-item {
   display: grid;
-  grid-template-columns: 70px 90px 1fr 30px 190px 110px 80px;
+  grid-template-columns: 70px 90px 1fr 70px 300px 180px 150px;
   align-items: center;
   background: #fff;
   padding: 15px;
@@ -158,10 +178,18 @@ function confirmSpec(item: any) {
   border-radius: 8px;
 }
 
+.list-checkbox {
+  accent-color: #ff5722;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 70px;
+}
+
 /*商品列表*/
 .cart-list{
   display: grid;
-  grid-template-columns: 85px 1fr 100px 120px 100px 80px;
+  grid-template-columns: 85px 1fr 200px 170px 175px 150px;
   align-items: center;
   background: #fafafa;
   padding: 15px;
@@ -211,6 +239,12 @@ function confirmSpec(item: any) {
 .dropdown-icon {
   font-size: 10px;
   color: #666;
+}
+
+.dropdown-search-icon {
+  font-size: 14px;
+  color: #ff5722;
+  cursor: pointer;
 }
 
 /* 選規格的彈窗 */
@@ -289,8 +323,23 @@ function confirmSpec(item: any) {
 .product-action button {
   background: none;
   border: none;
-  color: #ff4d4f;
+  color: #666;
   cursor: pointer;
+  font-size: 14px;
+}
+
+.checkout-checkbox {
+  display: grid;
+  grid-template-columns: 10px;
+  accent-color: #ff5722;
+  display: flex;
+  align-items: left;
+  margin-right: 20px;
+}
+
+.ml-2 {
+  display: grid;
+  margin-left: 8px;
 }
 
 .cart-summary {
