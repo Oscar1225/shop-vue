@@ -3,12 +3,13 @@ import { ref, computed } from 'vue'
 import { useRoute } from 'vue-router'
 import { products } from '@/data/products'
 import { useCartStore } from '@/stores/cart'
+import type { Product } from '@/types/product'
 
 const route = useRoute()
 const keyword = computed(() => route.query.keyword?.toString() || '')//從目前的路由查詢字串中取得 keyword 這個參數的值。如果沒有的話就回傳空字串 ''。
 const cartStore = useCartStore()
 const showMessage = ref(false)
-const messageText = ref('')
+const messageText = ref('')//
 
 const filtered = computed(() =>//這也是一個計算屬性，用來根據 keyword 對 products 陣列進行過濾。
   products.filter(p =>//假設 products 是一個商品陣列（你可能在別的地方定義了），這裡會根據條件留下符合搜尋關鍵字的項目。
@@ -17,7 +18,7 @@ const filtered = computed(() =>//這也是一個計算屬性，用來根據 keyw
     p.shopName.toLowerCase().includes(keyword.value.toLowerCase())//如果 商品名稱 或 商品描述 包含關鍵字，就保留這個商品。
   )
 )
-function addToCart(product: { name: any }) {
+function addToCart(product: Product) {
   cartStore.addToCart(product)
   // 這裡你可以之後接 API 或更新購物車狀態
   messageText.value = `${product.name} 已加入購物車！`
