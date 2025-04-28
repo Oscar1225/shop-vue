@@ -18,6 +18,14 @@ import ipadpro from "@/assets/image/searchdata/ipad pro.jpg"
 import ipadair7 from "@/assets/image/searchdata/ipad air 7.jpg"
 import 花香清潔袋中玫瑰天竺葵 from "@/assets/image/searchdata/花鄉清潔袋玫瑰.jpg"
 import 花香清潔袋小佛手柑茶香 from "@/assets/image/searchdata/花香清潔袋小—佛手柑茶香.jpg"
+import 拍立得 from "@/assets/image/searchdata/拍立得.jpg"
+import 紅領巾水手服 from "@/assets/image/searchdata/紅領巾水手服.jpg"
+import 黑色水手服 from "@/assets/image/searchdata/黑色水手服.jpg"
+import 愛馬仕小牛皮包款 from "@/assets/image/searchdata/愛馬仕小牛皮包款.png"
+import 環環相扣手鍊 from "@/assets/image/searchdata/環環相扣手鍊.jpg"
+import 懶骨頭沙發 from "@/assets/image/searchdata/懶骨頭沙發.png"
+import Dior經典款包 from "@/assets/image/searchdata/Dior經典款包.jpg"
+
 export const products: Product[] = [
   {
     id: 1,
@@ -180,5 +188,68 @@ export const products: Product[] = [
     price: 79,
     description: '花香清潔袋小—佛手柑茶香 全家/垃圾袋',
     image: 花香清潔袋小佛手柑茶香
+  },
+  {
+    id: 19,
+    shopName:"",
+    spec:"",
+    name: '拍立得',
+    price: 3490,
+    description: '拍立得',
+    image: 拍立得
+  },
+  {
+    id: 20,
+    shopName:"",
+    spec:"",
+    name: '紅領巾水手服',
+    price: 690,
+    description: '紅領巾水手服',
+    image: 紅領巾水手服
+  },
+  {
+    id: 21,
+    shopName:"",
+    spec:"",
+    name: '黑色水手服',
+    price: 185,
+    description: '黑色水手服',
+    image: 黑色水手服
+  },
+  {
+    id: 22,
+    shopName:"",
+    spec:"",
+    name: '愛馬仕小牛皮包款',
+    price: 499999,
+    description: '愛馬仕小牛皮包款',
+    image: 愛馬仕小牛皮包款
+  },
+  {
+    id: 23,
+    shopName:"",
+    spec:"",
+    name: '環環相扣手鍊',
+    price: 520,
+    description: '環環相扣手鍊',
+    image: 環環相扣手鍊
+  },
+  {
+    id: 24,
+    shopName:"",
+    spec:"",
+    name: '懶骨頭沙發',
+    price: 516,
+    description: '懶骨頭沙發',
+    image: 懶骨頭沙發
+  },
+  {
+    id: 25,
+    shopName:"",
+    spec:"",
+    name: 'Dior經典款包',
+    price: 160050,
+    description: 'Dior經典款包',
+    image: Dior經典款包
   },
 ]
