@@ -1,12 +1,13 @@
 <script setup lang="ts" console.log(cartStore.cart)>
 import { ref } from 'vue'
 import { useCartStore } from '@/stores/cart'
-
+/*import { colorOptions } from '@/src/data/colorOptions'
+import { capacityOptions } from '@/src/data/capacityOptions'
+*/
 const cartStore = useCartStore()
 
 // 🔥 定義用來記錄現在打開的商品（點選哪個商品開啟規格）
 const activeItem = ref<any | []>([])
-
 const currentSpec = ref<{ color: string; capacity: string }>({
   color: '',
   capacity: ''
@@ -19,9 +20,6 @@ function toggleSpecSelector(item: any) {
     activeItem.value = null
   } else {
     activeItem.value = item.id
-    // 加上預設的 colorOptions 和 capacityOptions
-    item.colorOptions = ['紅色', '藍色', '黑色']; // 隨便你要哪幾個
-    item.capacityOptions = ['64GB', '128GB', '256GB'];
   }
 }
 
@@ -74,10 +72,10 @@ function confirmSpec(item: any) {
           <div class="spec-label">顏色：</div>
           <div class="spec-options">
             <button
-              v-for="color in item.colorOptions"
+              v-for="color in colorOptions"
               :key="color"
-              :class="{ selected: currentSpec.value.color === color }"
-              @click="currentSpec.value.color = color"
+              :class="{ selected: currentSpec.color === color }"
+              @click="currentSpec.color = color"
             >
               {{ color }}
             </button>
@@ -89,10 +87,10 @@ function confirmSpec(item: any) {
           <div class="spec-label">容量：</div>
           <div class="spec-options">
             <button
-              v-for="capacity in item.capacityOptions"
+              v-for="capacity in capacityOptions"
               :key="capacity"
-              :class="{ selected: currentSpec.value.capacity === capacity }"
-              @click="currentSpec.value.capacity = capacity"
+              :class="{ selected: currentSpec.capacity === capacity }"
+              @click="currentSpec.capacity = capacity"
             >
               {{ capacity }}
             </button>
