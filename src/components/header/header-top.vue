@@ -15,9 +15,9 @@
       <a href="#"><i class="fa-solid fa-globe"></i> 繁體中文 ▼</a> |
 
       <div class="account-menu">
-        <span class="account-name" @click="toggleMenu">zeyanwu ▼</span>
+        <span class="account-name" @click="toggleMenu"><i class="fa-solid fa-circle-user"></i> zeyanwu ▼</span>
         <div class="dropdown" v-if="showMenu">
-          <a href="/account">我的帳戶</a>
+          <a href="/account/profile">我的帳戶</a>
           <a href="#">購買清單</a>
           <a href="#">登出</a>
         </div>
@@ -27,23 +27,27 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue'
+  import { ref } from 'vue'
 
-const showMenu = ref(false)
-const toggleMenu = () => {
-  showMenu.value = !showMenu.value
-}
+  const showMenu = ref(false)
+  const toggleMenu = () => {
+    showMenu.value = !showMenu.value
+  }
 
 // 點擊頁面其他地方時關閉選單
-document.addEventListener('click', (e) => {
-  const target = e.target as HTMLElement
-  if (!target.closest('.account-menu')) {
-    showMenu.value = false
-  }
-})
+  document.addEventListener('click', (e) => {
+    const target = e.target as HTMLElement
+    if (!target.closest('.account-menu')) {
+      showMenu.value = false
+    }
+  })
 </script>
 
 <style scoped>
+  a{
+    color: inherit; 
+    text-decoration: none;
+  }
 .top {
   display: flex;
   justify-content: space-between;
