@@ -18,8 +18,11 @@
 }
 
 main {
+margin-top: 15px;
   flex: 1;
   padding: 2rem;
+  border: 10px solid beige;
+  height: 650px;
 }
 
 </style>
