@@ -15,10 +15,13 @@
 <style scoped>
 .ju{
   display: flex;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-top: 15px;
+
 }
 
 main {
-margin-top: 15px;
   flex: 1;
   padding: 2rem;
   border: 10px solid beige;
