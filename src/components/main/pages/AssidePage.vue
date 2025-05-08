@@ -50,7 +50,9 @@
 </template>
 <style scoped>
   aside {
+  margin-top: 15px;
   width: 16rem; /* w-64 */
+  height: 650px;
   background-color: white;
   padding: 1rem;
   box-shadow: 0 0 6px rgba(0, 0, 0, 0.1);
