@@ -5,6 +5,7 @@ import search from '@/components/main/search.vue'
 import Footerall from '@/components/footer/footerall.vue'
 import buy from "@/components/header/buyheader.vue"
 import Commoditie from "@/components/main/commoditie.vue"
+import AccountPage from '@/components/main/pages/AccountPage.vue'
 
 const routes = [
   {
@@ -29,6 +30,14 @@ const routes = [
     components: {
     header:buy,
       main:Commoditie,
+    }
+  },
+  {
+    path:"/account",
+    name:"account",
+    components: {
+    header:headerall,
+      main:AccountPage,
     }
   }
 ]
