@@ -4,7 +4,7 @@
         <div>
           <div><i class="fa-solid fa-circle-user"></i>qw99g13tfs</div>
           <br>
-          <div>✎ 編輯個人簡介</div>
+          <a href="#">✎ 編輯個人簡介</a>
         </div>
       </div>
       <div>
@@ -65,7 +65,7 @@ aside img {
   border-radius: 9999px;
 }
 
-nav a {
+ a {
   display: flex;
   align-items: center;
   padding: 12px 10px;
@@ -76,11 +76,11 @@ nav a {
   transition: background 0.2s;
 }
 
-nav a:hover {
+ a:hover {
   background-color: #f3f4f6;
 }
 
-nav a.active {
+ a.active {
   background-color: #fee2e2;
   color: #dc2626;
   font-weight: 600;
