@@ -12,6 +12,7 @@ import Commoditie from '@/components/main/commoditie.vue'
 
 // Account 子頁
 import profilepage from '@/components/main/pages/profilepage.vue'
+import PaymentPage from '@/components/main/pages/PaymentPage.vue'
 
 const routes = [
   {
@@ -38,12 +39,20 @@ const routes = [
       main: Commoditie
     }
   },
-    {
+  {
     path: '/account/profile',
     name: 'profile',
     components: {
       header: headerall,
       main:profilepage,
+    }
+  },
+  {
+    path: '/account/payment',
+    name: 'payment',
+    components: {
+      header: headerall,
+      main:PaymentPage,
     }
   },
 ]
