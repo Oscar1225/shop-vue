@@ -22,10 +22,12 @@
 }
 
 main {
+  margin-left: 20px;
   flex: 1;
   padding: 2rem;
-  border: 10px solid beige;
   height: 650px;
+  background-color: white;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.1);
 }
 
 </style>
