@@ -11,8 +11,8 @@ import search from '@/components/main/search.vue'
 import Commoditie from '@/components/main/commoditie.vue'
 
 // Account 子頁
-import profilepage from '@/components/main/pages/profilepage.vue'
-import PaymentPage from '@/components/main/pages/PaymentPage.vue'
+import profilepage from '@/components/main/AccountPages/profilepage.vue'
+import PaymentPage from '@/components/main/AccountPages/PaymentPage.vue'
 
 const routes = [
   {

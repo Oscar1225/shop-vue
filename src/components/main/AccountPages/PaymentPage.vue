@@ -11,7 +11,7 @@
 </template>
 
 <script setup lang="ts">
-  import AssidePage from './AssidePage.vue';
+  import AssidePage from '@/components/main/AccountPages/AssidePage.vue';
 </script>
 <style scoped>
 .ju{
