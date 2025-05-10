@@ -68,7 +68,7 @@ aside img {
  a {
   display: flex;
   align-items: center;
-  padding: 12px 10px;
+  padding: 11px 10px;
   border-radius: 0.375rem;
   font-size: 0.875rem;
   color: #374151;
