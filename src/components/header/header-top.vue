@@ -17,7 +17,7 @@
       <div class="account-menu">
         <span class="account-name" @click="toggleMenu"><i class="fa-solid fa-circle-user"></i> qw99g13tfs ▼</span>
         <div class="dropdown" v-if="showMenu">
-          <router-link to="/account/profile">我的帳戶</router-link>
+          <router-link to="/account/profile" @click="closeMenu">我的帳戶</router-link>
           <a href="#">購買清單</a>
           <a href="#">登出</a>
         </div>
@@ -33,6 +33,10 @@
   const toggleMenu = () => {
     showMenu.value = !showMenu.value
   }
+  const closeMenu = () => {
+  showMenu.value = false
+}
+
 
 // 點擊頁面其他地方時關閉選單
   document.addEventListener('click', (e) => {
