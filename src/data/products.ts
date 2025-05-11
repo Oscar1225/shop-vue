@@ -8,7 +8,11 @@ export const products: Product[] = [
     name: 'GPU Minyak Urut 60ml',
     price: 155,
     description: '傳統草芳香按摩油',
+<<<<<<< HEAD
     image: https://picsum.photos/200
+=======
+    image: "https://picsum.photos/200 "
+>>>>>>> 3fc38678c9da9d282a809e50997f7d2aace5d42a
   },
   {
     id: 2,
@@ -17,7 +21,11 @@ export const products: Product[] = [
     name: 'NVIDIA H100 80G',
     price: 499999,
     description: '企業級GPU',
+<<<<<<< HEAD
     image: https://picsum.photos/200
+=======
+    image: "https://picsum.photos/200 "
+>>>>>>> 3fc38678c9da9d282a809e50997f7d2aace5d42a
   },
   {
     id: 3,
@@ -26,7 +34,11 @@ export const products: Product[] = [
     name: 'Pocket AI 顯示卡',
     price: 16800,
     description: 'Thunderbolt可攜式GPU',
+<<<<<<< HEAD
     image: https://picsum.photos/200
+=======
+    image: "https://picsum.photos/200 "
+>>>>>>> 3fc38678c9da9d282a809e50997f7d2aace5d42a
   },
   {
     id: 4,
