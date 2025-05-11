@@ -17,7 +17,7 @@
       <div class="account-menu">
         <span class="account-name" @click="toggleMenu"><i class="fa-solid fa-circle-user"></i> qw99g13tfs ▼</span>
         <div class="dropdown" v-if="showMenu">
-          <a href="/account/profile">我的帳戶</a>
+          <router-link to="/account/profile">我的帳戶</router-link>
           <a href="#">購買清單</a>
           <a href="#">登出</a>
         </div>

@@ -11,12 +11,12 @@
         <br>
         我的帳戶
         <nav>
-          <a href="/account/profile">
+          <router-link to="/account/profile">
             <span>📄</span> 個人檔案
-          </a>
-          <a href="/account/payment">
+          </router-link>
+          <router-link to="/account/payment">
             <span>💳</span> 銀行帳號 / 信用卡
-          </a>
+          </router-link>
           <a href="#">
             <span>🏠</span> 地址
           </a>
