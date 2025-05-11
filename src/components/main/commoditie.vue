@@ -6,7 +6,7 @@ import { capacityOptions } from '@/data/capacityOptions'
 const cartStore = useCartStore()
 
 const allSelected = ref(false)
-// 🔥 定義用來記錄現在打開的商品（點選哪個商品開啟規格）
+// 定義用來記錄現在打開的商品（點選哪個商品開啟規格）
 const activeItem = ref<any | []>([])
 const currentSpec = ref<{ color: string; capacity: string }>({
   color: '',
@@ -26,7 +26,7 @@ function updateAllSelected() {
   allSelected.value = cartStore.cart.length > 0 && cartStore.cart.every(item => item.selected)
 }
 
-// 🔥 點擊商品規格時，開關下拉彈窗
+// 點擊商品規格時，開關下拉彈窗
 function toggleSpecSelector(item: any) {
   // 切換規格選擇器的顯示狀態
   if (activeItem.value === item.id) {
