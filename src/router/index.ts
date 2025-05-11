@@ -13,6 +13,7 @@ import Commoditie from '@/components/main/commoditie.vue'
 // Account 子頁
 import profilepage from '@/components/main/AccountPages/profilepage.vue'
 import PaymentPage from '@/components/main/AccountPages/PaymentPage.vue'
+import AddressPage from '@/components/main/AccountPages/AddressPage.vue'
 
 const routes = [
   {
@@ -53,6 +54,14 @@ const routes = [
     components: {
       header: headerall,
       main:PaymentPage,
+    }
+  },
+  {
+    path: '/account/address',
+    name: 'address',
+    components: {
+      header: headerall,
+      main:AddressPage,
     }
   },
 ]

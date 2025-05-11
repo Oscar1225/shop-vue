@@ -17,9 +17,9 @@
           <router-link to="/account/payment">
             <span>💳</span> 銀行帳號 / 信用卡
           </router-link>
-          <a href="#">
+          <router-link to="/account/address">
             <span>🏠</span> 地址
-          </a>
+          </router-link>
           <a href="#">
             <span>🔒</span> 更改密碼
           </a>
