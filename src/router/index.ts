@@ -1,7 +1,9 @@
 import { createRouter, createWebHistory } from 'vue-router'
+import type { RouteRecordRaw } from 'vue-router'
+
 
 // Header / Footer
-import headerall from "@/components/header/header-all.vue"
+import headerall from '@/components/header/header-all.vue'
 import buy from "@/components/header/buyheader.vue"
 import Footerall from '@/components/footer/footerall.vue'
 
@@ -14,8 +16,17 @@ import Commoditie from '@/components/main/commoditie.vue'
 import profilepage from '@/components/main/AccountPages/profilepage.vue'
 import PaymentPage from '@/components/main/AccountPages/PaymentPage.vue'
 import AddressPage from '@/components/main/AccountPages/AddressPage.vue'
+import ChangePasswordPage from '@/components/main/AccountPages/ChangePasswordPage.vue'
+import CustomKYCPage from '@/components/main/AccountPages/CustomKYCPage.vue'
+import NotificationSettingsPage from '@/components/main/AccountPages/NotificationSettingsPage.vue'
+import PrivacySettingsPage from '@/components/main/AccountPages/PrivacySettingsPage.vue'
+import MyPurchasePage from '@/components/main/AccountPages/MyPurchasePage.vue'
+import NotificationsPage from '@/components/main/AccountPages/NotificationsPage.vue'
+import MyVouchersPage from '@/components/main/AccountPages/MyVouchersPage.vue'
+import MyShopeeCoinsPage from '@/components/main/AccountPages/MyShopeeCoinsPage.vue'
+import PaymentRefundTransactionPage from '@/components/main/AccountPages/PaymentRefundTransactionPage.vue'
 
-const routes = [
+const routes: RouteRecordRaw[] = [
   {
     path: '/',
     components: {
@@ -62,6 +73,79 @@ const routes = [
     components: {
       header: headerall,
       main:AddressPage,
+    }
+  },
+
+  {
+    path: '/account/changepassword',
+    name: 'changepassword',
+    components: {
+      header: headerall,
+      main:ChangePasswordPage,
+    }
+  },
+  {
+    path: '/account/customkyc',
+    name: 'customkyc',
+    components: {
+      header: headerall,
+      main:CustomKYCPage,
+    }
+  },
+  {
+    path: '/account/notificationsettings',
+    name: 'notificationsettings',
+    components: {
+      header: headerall,
+      main:NotificationSettingsPage,
+    }
+  },
+  {
+    path: '/account/privacysettings',
+    name: 'privacysettings',
+    components: {
+      header: headerall,
+      main:PrivacySettingsPage,
+    }
+  },
+  {
+    path: '/account/mypurchase',
+    name: 'mypurchase',
+    components: {
+      header: headerall,
+      main:MyPurchasePage,
+    }
+  },
+  {
+    path: '/account/notifications',
+    name: 'notifications',
+    components: {
+      header: headerall,
+      main:NotificationsPage,
+    }
+  },
+  {
+    path: '/account/myvouchers',
+    name: 'myvouchers',
+    components: {
+      header: headerall,
+      main:MyVouchersPage,
+    }
+  },
+  {
+    path: '/account/myshopeecoins',
+    name: 'myshopeecoins',
+    components: {
+      header: headerall,
+      main:MyShopeeCoinsPage,
+    }
+  },
+  {
+    path: '/account/paymentrefundtransaction',
+    name: 'paymentrefundtransaction',
+    components: {
+      header: headerall,
+      main:PaymentRefundTransactionPage,
     }
   },
 ]

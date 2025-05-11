@@ -25,12 +25,9 @@ function toggleSelectAll() {
 function updateAllSelected() {
   allSelected.value = cartStore.cart.length > 0 && cartStore.cart.every(item => item.selected)
 }
-<<<<<<< HEAD
 // 🔥 點擊商品規格時，開關下拉彈窗
-=======
 
 // 點擊商品規格時，開關下拉彈窗
->>>>>>> 3fc38678c9da9d282a809e50997f7d2aace5d42a
 function toggleSpecSelector(item: any) {
   // 切換規格選擇器的顯示狀態
   if (activeItem.value === item.id) {
