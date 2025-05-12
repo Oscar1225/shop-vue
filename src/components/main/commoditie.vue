@@ -4,10 +4,11 @@ import { useCartStore } from '@/stores/cart'
 import { colorOptions } from '@/data/colorOptions'
 import { capacityOptions } from '@/data/capacityOptions'
 const cartStore = useCartStore()
-
+// 全選的勾選狀態
 const allSelected = ref(false)
 // 定義用來記錄現在打開的商品（點選哪個商品開啟規格）
 const activeItem = ref<any | []>([])
+// 用來記錄當前選擇的商品規格（顏色與容量）
 const currentSpec = ref<{ color: string; capacity: string }>({
   color: '',
   capacity: ''
@@ -20,11 +21,11 @@ function toggleSelectAll() {
     item.selected = allSelected.value
   })
 }
-
 //單選時也可以更新全選狀態
 function updateAllSelected() {
   allSelected.value = cartStore.cart.length > 0 && cartStore.cart.every(item => item.selected)
 }
+// 🔥 點擊商品規格時，開關下拉彈窗
 
 // 點擊商品規格時，開關下拉彈窗
 function toggleSpecSelector(item: any) {
@@ -35,7 +36,7 @@ function toggleSpecSelector(item: any) {
     activeItem.value = item.id
   }
 }
-
+// 確認選擇的規格後，套用到商品上，並關閉彈窗
 function confirmSpec(item: any) {
   item.spec = `${currentSpec.value.color} ${currentSpec.value.capacity}`
   activeItem.value = null
@@ -365,4 +366,3 @@ function confirmSpec(item: any) {
 }
 
 </style>
-

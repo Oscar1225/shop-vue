@@ -20,34 +20,34 @@
           <router-link to="/account/address">
             <span>🏠</span> 地址
           </router-link>
-          <a href="#">
+          <router-link to="/account/changepassword">
             <span>🔒</span> 更改密碼
-          </a>
-          <a href="#">
+          </router-link>
+          <router-link to="/account/customkyc">
             <span>🛂</span> 關務署實名認證
-          </a>
-          <a href="#">
+          </router-link>
+          <router-link to="/account/NotificationSettings">
             <span>🔔</span> 通知設置
-          </a>
-          <a href="#">
+          </router-link>
+          <router-link to="/account/PrivacySettings">
             <span>🔐</span> 隱私設定
-          </a>
+          </router-link>
           <hr class="my-2">
-          <a href="#">
+          <router-link to="/account/MyPurchase">
             <span>🛒</span> 購買清單
-          </a>
-          <a href="#">
+          </router-link>
+          <router-link to="/account/Notifications">
             <span>📣</span> 通知總覽
-          </a>
-          <a href="#">
+          </router-link>
+          <router-link to="/account/MyVouchers">
             <span>🎟️</span> 我的優惠券
-          </a>
-          <a href="#">
+          </router-link>
+          <router-link to="/account/MyShopeeCoins">
             <span>💰</span> 我的蝦幣
-          </a>
-          <a href="#">
+          </router-link>
+          <router-link to="/account/PaymentRefundTransaction">
             <span>📑</span> 交易支付及退款查詢
-          </a>
+          </router-link>
         </nav>
       </div>
     </aside>
