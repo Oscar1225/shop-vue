@@ -1,16 +1,5 @@
 // src/data/products.ts
-
-// Product 介面定義
-export interface Product {
-  id: number;
-  shopName: string;
-  spec: string;
-  name: string;
-  price: number;
-  description: string;
-  image: string;
-}
-
+import type { Product } from '@/types/product'
 // Product 數據
 export const products: Product[] = [
   {
