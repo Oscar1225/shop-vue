@@ -4,7 +4,7 @@
         <div>
           <div><i class="fa-solid fa-circle-user"></i>qw99g13tfs</div>
           <br>
-          <a href="#">✎ 編輯個人簡介</a>
+          <router-link to="/account/profile">✎ 編輯個人簡介</router-link>
         </div>
       </div>
       <div>
