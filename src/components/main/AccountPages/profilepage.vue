@@ -107,13 +107,13 @@ const maskedPhone = '*********00'
 
 // 上傳頭像圖片預覽功能
 function handleImage(e: Event) {
-  const file = (e.target as HTMLInputElement).files?.[0]
-  if (file && file.size <= 1048576) {
+  const file = (e.target as HTMLInputElement).files?.[0] //選取的第一張圖
+  if (file && file.size <= 1048576) {  //檔案大小
     const reader = new FileReader()
     reader.onload = () => {
       imagePreview.value = reader.result as string
     }
-    reader.readAsDataURL(file)
+    reader.readAsDataURL(file) //建立預覽
   } else {
     alert('圖片檔案過大或格式錯誤')
   }
