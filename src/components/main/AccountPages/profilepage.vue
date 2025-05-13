@@ -113,7 +113,7 @@ function handleImage(e: Event) {
     reader.onload = () => {
       imagePreview.value = reader.result as string
     }
-    reader.readAsDataURL(file) //建立預覽
+    reader.readAsDataURL(file) 
   } else {
     alert('圖片檔案過大或格式錯誤')
   }
