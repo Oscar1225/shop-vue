@@ -1,101 +1,57 @@
 <template>
-  <div class="top">
-    <div class="left">
-      <a href="#">賣家中心</a> |
-      <a href="#">開始隨拍即賣!</a> |
-      <a href="#">下載</a> |
-      <a href="#">追蹤我們</a>
+  <div class="d-flex justify-content-between align-items-center px-3 py-2 text-white small" style="background-color: transparent">
+    <!-- 左邊 -->
+    <div class="d-flex align-items-center gap-2">
+      <a href="#" class="text-white text-decoration-none">賣家中心</a>
+      <span>|</span>
+      <a href="#" class="text-white text-decoration-none">開始隨拍即賣!</a>
+      <span>|</span>
+      <a href="#" class="text-white text-decoration-none">下載</a>
+      <span>|</span>
+      <a href="#" class="text-white text-decoration-none">追蹤我們</a>
       <i class="fa-brands fa-facebook"></i>
       <i class="fa-brands fa-instagram"></i>
       <i class="fa-brands fa-line"></i>
     </div>
-    <div class="right">
-      <a href="#"><i class="fa-regular fa-bell"></i> 通知總覽</a> |
-      <a href="#"><i class="fa-solid fa-question"></i> 幫助中心</a> |
-      <a href="#"><i class="fa-solid fa-globe"></i> 繁體中文 ▼</a> |
 
-      <div class="account-menu">
-        <span class="account-name" @click="toggleMenu"><i class="fa-solid fa-circle-user"></i> qw99g13tfs ▼</span>
-        <div class="dropdown" v-if="showMenu">
-          <router-link to="/account/profile" @click="closeMenu">我的帳戶</router-link>
-          <a href="#">購買清單</a>
-          <a href="#">登出</a>
-        </div>
-      </div>
+    <!-- 右邊 -->
+    <div class="d-flex align-items-center gap-2">
+      <a href="#" class="text-white text-decoration-none"><i class="fa-regular fa-bell"></i> 通知總覽</a>
+      <span>|</span>
+      <a href="#" class="text-white text-decoration-none"><i class="fa-solid fa-question"></i> 幫助中心</a>
+      <span>|</span>
+      <a href="#" class="text-white text-decoration-none"><i class="fa-solid fa-globe"></i> 繁體中文 ▼</a>
+      <span>|</span>
+
+      <!-- 帳戶選單 -->
+      <el-dropdown trigger="click" ref="dropdownRef">
+        <span class="btn btn-link text-white p-0 text-decoration-none">
+          <i class="fa-solid fa-circle-user"></i> qw99g13tfs ▼
+        </span>
+        <template #dropdown>
+          <el-dropdown-menu>
+            <el-dropdown-item @click="handleProfileClick">我的帳戶</el-dropdown-item>
+            <el-dropdown-item>購買清單</el-dropdown-item>
+            <el-dropdown-item>登出</el-dropdown-item>
+          </el-dropdown-menu>
+        </template>
+      </el-dropdown>
     </div>
   </div>
 </template>
-
 <script setup lang="ts">
   import { ref } from 'vue'
+  import { useRouter } from 'vue-router'
 
-  const showMenu = ref(false)
-  const toggleMenu = () => {
-    showMenu.value = !showMenu.value
+  // 路由實例
+  const router = useRouter()
+
+  // dropdown 元件實例
+  const dropdownRef = ref()
+
+  // 點擊「我的帳戶」時的動作
+  const handleProfileClick = () => {
+    dropdownRef.value?.handleClose()  // ✅ 關閉下拉選單
+    router.push('/account/profile')   // ✅ 導頁
   }
-  const closeMenu = () => {
-  showMenu.value = false
-}
-
-
-// 點擊頁面其他地方時關閉選單
-  document.addEventListener('click', (e) => {
-    const target = e.target as HTMLElement
-    if (!target.closest('.account-menu')) {
-      showMenu.value = false
-    }
-  })
 </script>
-
-<style scoped>
-  a{
-    color: inherit; 
-    text-decoration: none;
-  }
-.top {
-  display: flex;
-  justify-content: space-between;
-  font-size: 12px;
-}
-.top .left,
-.top .right {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-.top i {
-  cursor: pointer;
-}
-.account-menu {
-  position: relative;
-  cursor: pointer;
-}
-.account-name {
-  color:white;
-}
-.dropdown {
-  position: absolute;
-  top: 20px;
-  right: 0;
-  background-color: white;
-  border: 1px solid #ddd;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-  padding: 5px 10px;
-  z-index: 10;
-  display: flex;
-  flex-direction: column;
-  text-align: left;
-}
-.dropdown a {
-  padding: 10px 15px;
-  text-decoration: none;
-  color: #333;
-  white-space: nowrap;         /* 文字不換行 */
-  width: 100%;                 /* 每個選項撐滿整個 dropdown 寬度 */
-  box-sizing: border-box;
-}
-
-.dropdown a:hover {
-  background-color: #f5f5f5;
-}
-</style>
