@@ -1,5 +1,5 @@
 <template>
-  <div class="d-flex justify-content-between align-items-center px-3 py-2 text-white small" style="background-color: transparent">
+  <div class="d-flex justify-content-between align-items-center px-3 py-2 text-white small"style="background: linear-gradient(to right, #FF5722, #FF7043);">
     <!-- 左邊 -->
     <div class="d-flex align-items-center gap-2">
       <a href="#" class="text-white text-decoration-none">賣家中心</a>

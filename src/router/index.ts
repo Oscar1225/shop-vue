@@ -16,7 +16,7 @@ import Commoditie from '@/components/main/commoditie.vue'
 import profilepage from '@/components/main/AccountPages/profilepage.vue'
 import PaymentPage from '@/components/main/AccountPages/PaymentPage.vue'
 import AddressPage from '@/components/main/AccountPages/AddressPage.vue'
-import ChangePasswordPage from '@/components/main/AccountPages/ChangePasswordPage.vue'
+import ChangePasswordPage from "@/components/main/AccountPages/changePasswordPage.vue"
 import CustomKYCPage from '@/components/main/AccountPages/CustomKYCPage.vue'
 import NotificationSettingsPage from '@/components/main/AccountPages/NotificationSettingsPage.vue'
 import PrivacySettingsPage from '@/components/main/AccountPages/PrivacySettingsPage.vue'
@@ -48,7 +48,7 @@ const routes: RouteRecordRaw[] = [
     name: 'buy',
     components: {
       header: buy,
-      main: Commoditie
+      main: Commoditie,
     }
   },
   {

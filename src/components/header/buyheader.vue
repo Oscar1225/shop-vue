@@ -1,6 +1,6 @@
 <template>
     <div>
-        <HeaderTop/>
+        <headerTop/>
           <div class="main-nav">
             <div class="logo">
             <router-link to="/">
@@ -15,7 +15,7 @@
     </div>
 </template>
 <script setup lang="ts">
-import HeaderTop from './header-top.vue';
+    import headerTop from './header-top.vue';
 </script>
 <style scoped>
     .top {
