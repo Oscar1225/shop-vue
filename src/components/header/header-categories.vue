@@ -1,33 +1,19 @@
 <template>
-    <div class="categories">
-        <router-link :to="{ path: '/search', query: { keyword: 'phone' } }">超便宜手機</router-link> |
-        <a href="#">Nike官網</a> |
-        <a href="#">學生裝</a> |
-        <a href="#">行充20000mah</a> |
-        <a href="#">假指甲貼片</a> |
-        <a href="#">手飾</a> |
-        <a href="#">解壓球捏捏</a> |
-        <a href="#">拍立得相機</a> |
-        <a href="#">軟骨頭沙發</a> |
-        <a href="#">Jogging Pants Men</a> |
-        <a href="#">流行包包</a>
-    </div>
+  <div class="d-flex flex-wrap justify-content-center gap-2 mt-2 text-white">
+    <router-link :to="{ path: '/search', query: { keyword: 'phone' } }" class="text-white text-decoration-none">超便宜手機</router-link>
+    <el-link href="#" class="text-white" underline={false}>Nike官網</el-link>
+    <el-link href="#" class="text-white" underline={false}>學生裝</el-link>
+    <el-link href="#" class="text-white" underline={false}>行充20000mah</el-link>
+    <el-link href="#" class="text-white" underline={false}>假指甲貼片</el-link>
+    <el-link href="#" class="text-white" underline={false}>手飾</el-link>
+    <el-link href="#" class="text-white" underline={false}>解壓球捏捏</el-link>
+    <el-link href="#" class="text-white" underline={false}>拍立得相機</el-link>
+    <el-link href="#" class="text-white" underline={false}>軟骨頭沙發</el-link>
+    <el-link href="#" class="text-white" underline={false}>Jogging Pants Men</el-link>
+    <el-link href="#" class="text-white" underline={false}>流行包包</el-link>
+  </div>
 </template>
+
 <script setup lang="ts">
+// 無需額外邏輯
 </script>
-
-<style scoped>
-    .categories {
-        display: flex;
-        justify-content: center;
-        font-size: 14px;
-        margin-top: 10px;
-        flex-wrap: wrap;
-        gap: 10px;
-    }
-
-    .categories a {
-        color: white;
-        text-decoration: none;
-    }
-</style>
