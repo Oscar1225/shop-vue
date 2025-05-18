@@ -1,78 +1,47 @@
 <template>
-    <main>
-        <div class="two">
-            <div class="image-container">
-                <button class="arrow-button arrow-left"><i class="fa-solid fa-arrow-left"></i></button>
-                <img :src="one" alt="圖片">
-                <button class="arrow-button arrow-right"><i class="fa-solid fa-arrow-right"></i></button>
-            </div>
-            <div class="a">
-                <div class="g">
-                    <img :src="two" width="100%" height="100%">
-                </div>
-                <div class="g">
-                    <img :src="three" width="100%" height="100%">
-                </div>
-            </div>
-        </div>
-    </main>
+  <main class="container my-4">
+    <div class="row justify-content-center align-items-center">
+      <div class="col-md-8 position-relative">
+        <el-button
+            class="position-absolute start-0 top-50 translate-middle-y"
+            :icon="ArrowLeft"
+            circle
+            @click="prevImage"
+        />
+        <img :src="images[currentIndex]" alt="主圖" class="img-fluid w-100 rounded shadow" />
+        <el-button
+            class="position-absolute end-0 top-50 translate-middle-y"
+            :icon="ArrowRight"
+            circle
+            @click="nextImage"
+        />
+      </div>
+      <div class="col-md-4 d-flex flex-column justify-content-between mt-3 mt-md-0">
+        <img :src="two" class="img-fluid mb-3 rounded shadow" />
+        <img :src="three" class="img-fluid rounded shadow" />
+      </div>
+    </div>
+  </main>
 </template>
 
 <script setup lang="ts">
-    import one from '@/assets/image/ONE.png'
-    import two from '@/assets/image/TWO.png'
-    import three from '@/assets/image/THREE.png'
+import one from '@/assets/image/ONE.png'
+import two from '@/assets/image/TWO.png'
+import three from '@/assets/image/THREE.png'
+import { ref } from 'vue'
+
+// 引入 Element Plus 的圖示元件
+import { ArrowLeft, ArrowRight } from '@element-plus/icons-vue'
+
+const images = [one] // 可以擴充陣列加入更多主圖
+const currentIndex = ref(0)
+
+const nextImage = () => {
+  currentIndex.value = (currentIndex.value + 1) % images.length
+}
+
+const prevImage = () => {
+  currentIndex.value = (currentIndex.value - 1 + images.length) % images.length
+}
 </script>
 
-<style scoped>
-    .two{
-            height:350px;
-            display: flex;
-            justify-content: center;
-            margin-right: 15%;
-            margin-left: 15%;
-        }
-        .a{
-            flex-direction: column;
-        }
-        .g{
-            width: auto;
-            height: 50%;
-        }
-        .image-container {
-            position: relative; /*疊在圖片上*/
-            width: 100%;
-            height: 100%;
-        }
-    
-        .image-container img {
-            width: 100%;
-            height: 100%;
-            display: block;/*圖片會完全符合容器寬度，並且不會有多餘的空白*/
-        }
-    
-        .arrow-button {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            background-color: rgba(0, 0, 0, 0.5);
-            color: white;
-            border: none;
-            padding: 10px;
-            cursor: pointer;
-            font-size: 20px;
-        }
-    
-        .arrow-left {
-            left: 10px;
-        }
-    
-        .arrow-right {
-            right: 10px;
-        }
-    
-        .arrow-button:hover {
-            background-color: rgba(0, 0, 0, 0.7);
-        }
-
-</style>
