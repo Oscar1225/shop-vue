@@ -55,7 +55,7 @@
           <el-checkbox v-model="allSelected" @change="toggleSelectAll">全選</el-checkbox>
         </div>
         <div class="fw-bold fs-5">總金額：${{ Math.round(cartStore.totalPrice || 0) }}</div>
-        <el-button type="primary" size="large">去買單</el-button>
+        <el-button type="primary" size="large" style="background-color: #ee4d2d; border-color: #ee4d2d;">去買單</el-button>
       </div>
     </div>
   </div>
