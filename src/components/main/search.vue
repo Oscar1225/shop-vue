@@ -50,7 +50,7 @@ function addToCart(product: Product) {
   <div class="container">
     <div class="row">
       <div v-for="product in filtered" :key="product.id" class="col-md-3 mb-4" >
-        <el-card shadow="hover" class="text-center" >
+        <el-card shadow="hover" class="text-center custom-card" >
           <img :src="product.image" :alt="product.name" class="img-fluid mb-2" @click="addToCart(product)" />
           <h5>{{ product.name }}</h5>
           <p class="text-warning fw-bold">${{ product.price }}</p>
@@ -60,4 +60,14 @@ function addToCart(product: Product) {
     </div>
   </div>
 </template>
+<style scoped>
+.custom-card {
+  width: 250px;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+</style>
+
 
