@@ -1,10 +1,10 @@
 <template>
-  <div class="d-flex gap-3 m-4">
+  <div class="d-flex mx-4 mt-3">
     <!-- 左側導覽欄 -->
     <AssidePage />
 
     <!-- 右側主內容 -->
-    <main class="flex-fill p-4 bg-white shadow rounded">
+    <main class="ms-4 flex-grow-1 p-4 bg-white shadow">
       <h2>我的檔案</h2>
       <p class="text-secondary mb-4">管理你的檔案以保護你的帳戶</p>
 
