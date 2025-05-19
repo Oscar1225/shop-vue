@@ -6,7 +6,7 @@
     <!-- 右側內容區 -->
     <main
       class="ms-4 flex-grow-1 p-4 bg-white shadow justify-content-center align-items-center d-flex"
-      style="height: 650px;"
+      style="height: auto;"
     >
       <el-text tag="h2" class=" fw-bold text-center" style="font-size: 2rem;">關務署實名認證</el-text>
     </main>
