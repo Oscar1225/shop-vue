@@ -1,9 +1,8 @@
 <template>
-  <div
-    class="d-flex justify-content-between align-items-center px-3 py-2 text-white small"
-    style="background: linear-gradient(to right, #FF5722, #FF7043);"
-  >
-    <!-- 左邊 -->
+  <div class="d-flex justify-content-between align-items-center px-3 py-2 text-white small"
+       style="background: linear-gradient(to right, #FF5722, #FF7043);">
+
+    <!-- 左側功能列 -->
     <div class="d-flex align-items-center gap-2">
       <a href="#" class="text-white text-decoration-none">賣家中心</a>
       <span>|</span>
@@ -17,32 +16,35 @@
       <i class="fa-brands fa-line"></i>
     </div>
 
-    <!-- 右邊 -->
+    <!-- 右側功能列 -->
     <div class="d-flex align-items-center gap-2">
-      <!-- 通知下拉選單 -->
+
+      <!-- 通知下拉 -->
       <el-dropdown trigger="click">
         <span class="text-white text-decoration-none" style="cursor: pointer;">
-          <i class="fa-regular fa-bell"></i> 通知總覽 ▼
+          <i class="fa-regular fa-bell"></i> 通知總覽
         </span>
         <template #dropdown>
-          <div class="notification-dropdown">
-            <div class="dropdown-header fw-bold px-3 pt-2">最近收到的通知</div>
-            <div class="dropdown-body">
-              <div
-                v-for="(item, index) in notifications"
-                :key="index"
-                class="notification-item px-3 py-2 border-bottom"
-              >
-                <div class="d-flex align-items-start gap-2">
-                  <span class="badge text-bg-danger">{{ item.badge }}</span>
-                  <div>
-                    <div class="fw-semibold text-dark">{{ item.title }}</div>
-                    <div class="small text-muted">{{ item.message }}</div>
+          <div class="notification-panel">
+            <div class="panel-header">最近收到的通知</div>
+            <div class="panel-body">
+              <div v-for="(item, index) in notifications" :key="index" class="notification-item">
+                <div class="d-flex">
+                  <div class="badge-label" :style="{ backgroundColor: item.color }">
+                    {{ item.badge }}
+                  </div>
+                  <div class="ms-2 flex-grow-1">
+                    <div class="fw-semibold text-dark" style="font-size: 14px;">
+                      {{ item.title }}
+                    </div>
+                    <div class="text-muted small" style="font-size: 12px;">
+                      {{ item.message }}
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="dropdown-footer text-center py-2">
+            <div class="panel-footer">
               <a href="#" class="text-primary small">查看全部</a>
             </div>
           </div>
@@ -84,29 +86,61 @@ const handleProfileClick = () => {
   router.push('/account/profile')
 }
 
+// 通知資料模擬
 const notifications = ref([
-  { badge: '免運加碼', title: '月底驚喜加碼！', message: 'OK Mart 全站 $299 起免運券，限時領取' },
-  { badge: '25日限定', title: '商城瘋購節優惠券送達囉！', message: '10% 折扣等你用，先用先贏！' },
-  { badge: '蝦皮抽獎', title: '快來抽 iPhone 16', message: '滿 $888 抽，週五免運還有 5 折券' },
-  { badge: '限時活動', title: '驚喜優惠又來囉', message: '5% 蝦幣人人有，天氣熱要電鍋新生活' }
+  { badge: '免運加碼', title: '月底驚喜加碼！', message: 'OK Mart 全站 $299 起免運券，限時領取', color: '#00BCD4' },
+  { badge: '25日限定', title: '商城瘋購節優惠券送達囉！', message: '10% 折扣等你用，先用先贏！', color: '#F44336' },
+  { badge: '蝦皮抽獎', title: '快來抽 iPhone 16', message: '滿 $888 抽，週五免運還有 5 折券', color: '#E91E63' },
+  { badge: '限時活動', title: '驚喜優惠又來囉', message: '5% 蝦幣人人有，天氣熱要電鍋新生活', color: '#FF9800' }
 ])
 </script>
 
 <style scoped>
-.notification-dropdown {
-  width: 360px;
-  background-color: white;
-  border-radius: 4px;
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+.notification-panel {
+  width: 400px;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  background: white;
+  overflow: hidden;
 }
 
-.dropdown-body {
+.panel-header {
+  font-weight: bold;
+  font-size: 14px;
+  padding: 12px 16px;
+  border-bottom: 1px solid #eee;
+  background: #f8f8f8;
+}
+
+.panel-body {
   max-height: 300px;
   overflow-y: auto;
 }
 
+.notification-item {
+  padding: 12px 16px;
+  border-bottom: 1px solid #f0f0f0;
+  transition: background-color 0.2s ease;
+}
+
 .notification-item:hover {
   background-color: #f9f9f9;
-  cursor: pointer;
+}
+
+.badge-label {
+  color: #fff;
+  padding: 4px 6px;
+  font-size: 12px;
+  border-radius: 3px;
+  white-space: nowrap;
+  font-weight: bold;
+  min-width: 60px;
+  text-align: center;
+}
+
+.panel-footer {
+  text-align: center;
+  padding: 8px 0;
+  background: #f8f8f8;
 }
 </style>
