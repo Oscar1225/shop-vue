@@ -28,7 +28,7 @@
           <div class="notification-panel">
             <div class="panel-header">最近收到的通知</div>
             <div class="panel-body">
-              <div v-for="(item, index) in notifications" :key="index" class="notification-item">
+              <div v-for="(item, index) in notifications" :key="index" class="notification-item"style="cursor: pointer;"> 
                 <div class="d-flex">
                   <div class="badge-label" :style="{ backgroundColor: item.color }">
                     {{ item.badge }}
