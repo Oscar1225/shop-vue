@@ -11,6 +11,7 @@ import Footerall from '@/components/footer/footerall.vue'
 import mainone from '@/components/main/main-one.vue'
 import search from '@/components/main/search.vue'
 import Commoditie from '@/components/main/commoditie.vue'
+import Notfoundpage from '@/components/main/notfoundpage.vue'
 
 // Account 子頁
 import profilepage from '@/components/main/AccountPages/profilepage.vue'
@@ -146,6 +147,14 @@ const routes: RouteRecordRaw[] = [
     components: {
       header: headerall,
       main:PaymentRefundTransactionPage,
+    }
+  },
+    {
+    path: '/:pathMatch(.*)*',
+    name: 'NotFound',
+    components: {
+      header: headerall,
+      main:Notfoundpage
     }
   },
 ]
