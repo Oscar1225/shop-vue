@@ -10,19 +10,19 @@
                 </el-button></a>
                 <a href="#" class="text-decoration-none"><el-button class="d-flex flex-column align-items-center p-2 bg-transparent border-0" text>
                     <div>
-                       <i class="fa-solid fa-plane-arrival text-warning fs-4 mb-2" style="color: #FF5722;"></i>
+                       <i class="fa-solid fa-plane-arrival fs-4 mb-2" style="background: white; color: #FF5722;"></i>
                         <div class="text-black small fs-6"> $99起免運</div>
                     </div>
                 </el-button></a>
                 <a href="#" class="text-decoration-none"><el-button class="d-flex flex-column align-items-center p-2 bg-transparent border-0" text>
                     <div>
-                        <i class="fa-solid fa-check text-warning fs-4 mb-2" style="color: #FF5722;"></i>
+                        <i class="fa-solid fa-check fs-4 mb-2" style="background: white; color: #FF5722;"></i>
                         <div class="text-black small fs-6">免運當日到</div>
                     </div>
                 </el-button></a>
                 <a href="#" class="text-decoration-none"><el-button class="d-flex flex-column align-items-center p-2 bg-transparent border-0" text>
                     <div>
-                        <i class="fa-solid fa-ticket text-warning fs-4 mb-2" style="color: #FF5722;"></i>
+                        <i class="fa-solid fa-ticket fs-4 mb-2" style="background: white; color: #FF5722;"></i>
                         <div class="text-black small fs-6">一鍵領券</div>
                     </div>
                 </el-button></a>
@@ -40,13 +40,13 @@
                 </el-button></a>
                 <a href="#" class="text-decoration-none"><el-button class="d-flex flex-column align-items-center p-2 bg-transparent border-0" text>
                     <div>
-                        <i class="fa-solid fa-credit-card text-warning fs-4 mb-2" style="color: #FF5722;"></i>
+                        <i class="fa-solid fa-credit-card fs-4 mb-2" style="background: white; color: #FF5722;"></i>
                         <div class="text-black small fs-6">銀行刷卡優惠</div>
                     </div>
                 </el-button></a>
                 <a href="#" class="text-decoration-none"><el-button class="d-flex flex-column align-items-center p-2 bg-transparent border-0" text>
                     <div>
-                        <i class="fa-solid fa-thumbs-up text-warning fs-4 mb-2" style="color: #FF5722;"></i>
+                        <i class="fa-solid fa-thumbs-up fs-4 mb-2" style="background: white; color: #FF5722;"></i>
                         <div class="text-black small fs-6">蝦皮超便宜</div>
                     </div>
                 </el-button></a>
