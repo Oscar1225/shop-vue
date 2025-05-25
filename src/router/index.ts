@@ -26,7 +26,8 @@ import NotificationsPage from '@/components/main/AccountPages/NotificationsPage.
 import MyVouchersPage from '@/components/main/AccountPages/MyVouchersPage.vue'
 import MyShopeeCoinsPage from '@/components/main/AccountPages/MyShopeeCoinsPage.vue'
 import PaymentRefundTransactionPage from '@/components/main/AccountPages/PaymentRefundTransactionPage.vue'
-import Helppage from '@/components/main/helppage.vue'
+import Helppagemain from '@/components/main/helppagemain.vue'
+import Helppageheader from '@/components/header/helppageheader.vue'
 
 const routes: RouteRecordRaw[] = [
   {
@@ -154,7 +155,8 @@ const routes: RouteRecordRaw[] = [
     path: '/help',
     name: 'help',
     components: {
-      header:Helppage
+      header:Helppageheader,
+      main:Helppagemain
     }
   },
     {
