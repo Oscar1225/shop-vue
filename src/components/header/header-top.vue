@@ -52,7 +52,7 @@
       </el-dropdown>
 
       <span>|</span>
-      <a href="#" class="text-white text-decoration-none"><i class="fa-solid fa-question"></i> 幫助中心</a>
+      <a href="/help" target="_blank" rel="noopener noreferrer" class="text-white text-decoration-none"><i class="fa-solid fa-question"></i> 幫助中心</a>
       <span>|</span>
       <a href="#" class="text-white text-decoration-none"><i class="fa-solid fa-globe"></i> 繁體中文 ▼</a>
       <span>|</span>
