@@ -45,7 +45,7 @@
               </div>
             </div>
             <div class="panel-footer">
-              <a href="#" class="text-primary small">查看全部</a>
+              <a href="/account/Notifications" class="text-primary small">查看全部</a>
             </div>
           </div>
         </template>
