@@ -22,7 +22,7 @@
       <!-- 通知下拉 -->
       <el-dropdown trigger="click">
         <span class="text-white text-decoration-none" style="cursor: pointer;">
-          <i class="fa-regular fa-bell"></i> 通知總覽
+          <i class="fa-regular fa-bell"></i> 通知總覽 ▼
         </span>
         <template #dropdown>
           <div class="notification-panel">
