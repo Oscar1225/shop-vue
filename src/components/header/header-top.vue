@@ -1,9 +1,10 @@
 <template>
-  <div class="d-flex justify-content-between align-items-center px-3 py-2 text-white small"
-       style="background: linear-gradient(to right, #FF5722, #FF7043);">
-
+  <div
+    class="d-flex flex-column flex-md-row justify-content-between align-items-center gap-2 px-3 py-2 text-white small"
+    style="background: linear-gradient(to right, #FF5722, #FF7043);"
+  >
     <!-- 左側功能列 -->
-    <div class="d-flex align-items-center gap-2">
+    <div class="d-flex flex-wrap align-items-center gap-2">
       <a href="#" class="text-white text-decoration-none">賣家中心</a>
       <span>|</span>
       <a href="#" class="text-white text-decoration-none">開始隨拍即賣!</a>
@@ -17,8 +18,7 @@
     </div>
 
     <!-- 右側功能列 -->
-    <div class="d-flex align-items-center gap-2">
-
+    <div class="d-flex flex-wrap align-items-center gap-2 justify-content-end mt-2 mt-md-0">
       <!-- 通知下拉 -->
       <el-dropdown trigger="click">
         <span class="text-white text-decoration-none" style="cursor: pointer;">
@@ -28,7 +28,12 @@
           <div class="notification-panel">
             <div class="panel-header">最近收到的通知</div>
             <div class="panel-body">
-              <div v-for="(item, index) in notifications" :key="index" class="notification-item"style="cursor: pointer;"> 
+              <div
+                v-for="(item, index) in notifications"
+                :key="index"
+                class="notification-item"
+                style="cursor: pointer;"
+              >
                 <div class="d-flex">
                   <div class="badge-label" :style="{ backgroundColor: item.color }">
                     {{ item.badge }}
@@ -52,9 +57,13 @@
       </el-dropdown>
 
       <span>|</span>
-      <a href="/help" target="_blank" rel="noopener noreferrer" class="text-white text-decoration-none"><i class="fa-solid fa-question"></i> 幫助中心</a>
+      <a href="/help" target="_blank" rel="noopener noreferrer" class="text-white text-decoration-none">
+        <i class="fa-solid fa-question"></i> 幫助中心
+      </a>
       <span>|</span>
-      <a href="#" class="text-white text-decoration-none"><i class="fa-solid fa-globe"></i> 繁體中文 ▼</a>
+      <a href="#" class="text-white text-decoration-none">
+        <i class="fa-solid fa-globe"></i> 繁體中文 ▼
+      </a>
       <span>|</span>
 
       <!-- 帳戶選單 -->
@@ -97,11 +106,14 @@ const notifications = ref([
 
 <style scoped>
 .notification-panel {
-  width: 400px;
+  width: 100%;
+  max-width: 90vw;
+  min-width: 250px;
   border-radius: 8px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
   background: white;
   overflow: hidden;
+  z-index: 9999;
 }
 
 .panel-header {
