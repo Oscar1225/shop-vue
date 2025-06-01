@@ -3,17 +3,21 @@
     <headerTop />
 
     <!-- 主導覽列 -->
-    <div class="d-flex align-items-center justify-content-between bg-light py-3" style="height: 80px;">
+    <div class="d-flex flex-column flex-md-row align-items-center justify-content-between bg-light py-3 px-3 px-md-5" style="min-height: 80px;">
       <!-- Logo -->
-      <div class="ms-5 fs-4 fw-bold text-primary d-flex align-items-center">
-        <router-link to="/" class="text-decoration-none d-flex align-items-center" style="background-color: white; color: #FF5722;">
+      <div class="fs-5 fs-md-4 fw-bold text-primary d-flex align-items-center mb-2 mb-md-0 me-md-4">
+        <router-link
+          to="/"
+          class="text-decoration-none d-flex align-items-center"
+          style="background-color: white; color: #FF5722;"
+        >
           <i class="fa-solid fa-bag-shopping me-2"></i>
-          <span>蝦皮購物 | 購物車</span>
+          <span class="text-nowrap">蝦皮購物 | 購物車</span>
         </router-link>
       </div>
 
       <!-- 搜尋欄 -->
-      <div class="d-flex w-50 me-5">
+      <div class="d-flex w-100 w-md-50">
         <el-input
           v-model="searchText"
           placeholder="搜尋商品關鍵字"
@@ -22,7 +26,13 @@
           :suffix-icon="Search"
           @keyup.enter="search"
         />
-        <el-button type="primary" size="large" class="ms-2" @click="search" style="background-color: white; color: #FF5722; border: 1px solid #dcdfe6;">
+        <el-button
+          type="primary"
+          size="large"
+          class="ms-2"
+          @click="search"
+          style="background-color: white; color: #FF5722; border: 1px solid #dcdfe6;"
+        >
           搜尋
         </el-button>
       </div>
