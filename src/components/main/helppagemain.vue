@@ -72,55 +72,55 @@
             <div class="col-12 col-md-10">
                 <el-button class="w-100 d-flex align-items-center justify-content-start text-start px-3"
                     style="height: 70px; background-color: white; border: 1px dashed #ddd;">
-                    <span class="text-black fs-5">[客戶服務] 近期更新懶人包⭐</span>
+                    <span class="text-black fs-6 fs-md-5">[客戶服務] 近期更新懶人包⭐</span>
                 </el-button>
             </div>
             <div class="col-12 col-md-10">
                 <el-button class="w-100 d-flex align-items-center justify-content-start text-start px-3"
                     style="height: 70px; background-color: white; border: 1px dashed #ddd;">
-                    <span class="text-black fs-5">[技術問題] 系統相關維護公告</span>
+                    <span class="text-black fs-6 fs-md-5">[技術問題] 系統相關維護公告</span>
                 </el-button>
             </div>
             <div class="col-12 col-md-10">
                 <el-button class="w-100 d-flex align-items-center justify-content-start text-start px-3"
                     style="height: 70px; background-color: white; border: 1px dashed #ddd;">
-                    <span class="text-black fs-5">[🔥APP限定免付費] [客戶服務] 怎麼使用網路電話與客服通話？</span>
+                    <span class="text-black fs-6 fs-md-5">[🔥APP限定免付費] [客戶服務] 怎麼使用網路電話與客服通話？</span>
                 </el-button>
             </div>
             <div class="col-12 col-md-10">
                 <el-button class="w-100 d-flex align-items-center justify-content-start text-start px-3"
                     style="height: 70px; background-color: white; border: 1px dashed #ddd;">
-                    <span class="text-black fs-5">[蝦皮購物] 新手攻略(初階)－新手上路</span>
+                    <span class="text-black fs-6 fs-md-5">[蝦皮購物] 新手攻略(初階)－新手上路</span>
                 </el-button>
             </div>
             <div class="col-12 col-md-10">
                 <el-button class="w-100 d-flex align-items-center justify-content-start text-start px-3"
                     style="height: 70px; background-color: white; border: 1px dashed #ddd;">
-                    <span class="text-black fs-5">[帳號問題] 新增/修改手機號碼時，已被綁定/無法修改怎麼辦？</span>
+                    <span class="text-black fs-6 fs-md-5">[帳號問題] 新增/修改手機號碼時，已被綁定/無法修改怎麼辦？</span>
                 </el-button>
             </div>
             <div class="col-12 col-md-10">
                 <el-button class="w-100 d-flex align-items-center justify-content-start text-start px-3"
                     style="height: 70px; background-color: white; border: 1px dashed #ddd;">
-                    <span class="text-black fs-5">[發票相關] 如何查詢發票資訊？</span>
+                    <span class="text-black fs-6 fs-md-5">[發票相關] 如何查詢發票資訊？</span>
                 </el-button>
             </div>
             <div class="col-12 col-md-10">
                 <el-button class="w-100 d-flex align-items-center justify-content-start text-start px-3"
                     style="height: 70px; background-color: white; border: 1px dashed #ddd;">
-                    <span class="text-black fs-5">[蝦幣相關] 什麼是蝦幣，我該如何使用／折抵蝦幣？以及是否有折抵上限？</span>
+                    <span class="text-black fs-6 fs-md-5">[蝦幣相關] 什麼是蝦幣，我該如何使用／折抵蝦幣？以及是否有折抵上限？</span>
                 </el-button>
             </div>
             <div class="col-12 col-md-10">
                 <el-button class="w-100 d-flex align-items-center justify-content-start text-start px-3"
                     style="height: 70px; background-color: white; border: 1px dashed #ddd;">
-                    <span class="text-black fs-5">[配送相關] 如何在蝦皮購物查看包裹配送進度？</span>
+                    <span class="text-black fs-6 fs-md-5">[配送相關] 如何在蝦皮購物查看包裹配送進度？</span>
                 </el-button>
             </div>
             <div class="col-12 col-md-10 mb-4">
                 <el-button class="w-100 d-flex align-items-center justify-content-start text-start px-3"
                     style="height: 70px; background-color: white; border: 1px dashed #ddd;">
-                    <span class="text-black fs-5">[退貨退款申請] 如何申請退貨退款？</span>
+                    <span class="text-black fs-6 fs-md-5">[退貨退款申請] 如何申請退貨退款？</span>
                 </el-button>
             </div>
         </div>
